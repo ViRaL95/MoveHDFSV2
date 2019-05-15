@@ -58,7 +58,6 @@ import org.apache.nifi.processor.Relationship;
 import org.apache.nifi.processor.exception.ProcessException;
 import org.apache.nifi.processor.util.StandardValidators;
 import org.apache.nifi.util.StopWatch;
-import java.util.UUID;
 
 /**
  * This processor renames files on HDFS.
@@ -87,7 +86,7 @@ public class MoveHDFS_v2 extends AbstractHadoopProcessor {
 
     public static final String ABSOLUTE_HDFS_PATH_ATTRIBUTE = "absolute.hdfs.path";
 
-    // relationships
+    // relationshipsx
     public static final Relationship REL_SUCCESS = new Relationship.Builder().name("success")
             .description("Files that have been successfully renamed on HDFS are transferred to this relationship")
             .build();
